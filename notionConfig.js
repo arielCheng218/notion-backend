@@ -18,11 +18,8 @@ exports.writeData = async (name, source) => {
     },
     properties: {
       Name: {
-        id: uuid(),
-        type: "title",
         title: [
           {
-            type: "text",
             text: {
               content: name,
             },
@@ -30,12 +27,8 @@ exports.writeData = async (name, source) => {
         ],
       },
       Source: {
-        id: uuid(),
-        type: "url",
         url: source,
       },
-      Status: null,
-      Topic: null,
     },
   });
   return response;
