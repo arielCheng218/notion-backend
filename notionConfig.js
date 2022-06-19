@@ -18,7 +18,7 @@ exports.readData = async () => {
 };
 
 // Write data to database
-exports.writeData = async ({ title, source }) => {
+exports.writeData = async ({ name, source }) => {
   const response = await notion.pages.create({
     parent: {
       database_id: databaseId,
@@ -29,7 +29,7 @@ exports.writeData = async ({ title, source }) => {
           {
             type: "text",
             text: {
-              content: title,
+              content: name,
             },
           },
         ],

@@ -11,10 +11,10 @@ app.get("/", async (req, res) => {
   res.send(data);
 });
 
-app.post("/add-to-nerd-time-list", async (req, res) => {
+app.post("/on-submit", async (req, res) => {
   const data = await writeData({
-    title: "Test",
-    source: "https://www.youtube.com",
+    name: req.body.name,
+    source: req.source,
   });
   return res.send(data);
 });
