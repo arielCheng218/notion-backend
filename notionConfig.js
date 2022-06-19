@@ -19,10 +19,12 @@ exports.writeData = async (name, source) => {
     properties: {
       Name: {
         id: uuid(),
-        type: "text",
-        name: "Name",
+        type: "title",
+        name: name,
       },
       Source: {
+        id: uuid(),
+        type: "url",
         url: source,
       },
       Status: null,
