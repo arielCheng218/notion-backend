@@ -24,8 +24,8 @@ app.post("/on-submit", async (req, res) => {
   console.log(req.body.source);
   console.log(typeof req.body.source);
   const data = await writeData({
-    name: req.body.name,
-    source: req.source,
+    name: "Test",
+    source: "https://www.youtube.com/",
   });
   return res.send(data);
 });
