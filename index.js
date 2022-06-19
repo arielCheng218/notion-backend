@@ -20,7 +20,9 @@ app.get("/", async (req, res) => {
 
 app.post("/on-submit", async (req, res) => {
   console.log(req.body.name);
+  console.log(typeof req.body.name);
   console.log(req.body.source);
+  console.log(typeof req.body.source);
   const data = await writeData({
     name: req.body.name,
     source: req.source,
