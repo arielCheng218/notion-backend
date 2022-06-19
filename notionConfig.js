@@ -29,6 +29,8 @@ exports.writeData = async (name, source) => {
       Source: {
         url: source,
       },
+      Status: null,
+      Topic: null,
     },
   });
   return response;
