@@ -4,7 +4,9 @@ require("dotenv").config();
 const { Client } = require("@notionhq/client");
 const databaseId = process.env.NOTION_API_DATABASE;
 
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
+const notion = new Client({
+  auth: "secret_ArmCMi4T3vrro89rQbRpF6S3LSer46Suocv8nV4uri6",
+});
 
 // Write data to database
 exports.writeData = async (name, source) => {
