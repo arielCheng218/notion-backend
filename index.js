@@ -17,5 +17,5 @@ app.post("/add-to-nerd-time-list", async (req, res) => {
 app.listen(
   process.env.PORT || 5000,
   "0.0.0.0",
-  console.log(`Listening on port ${port}`)
+  console.log(`Listening on port ${process.env.PORT}`)
 );
