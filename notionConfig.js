@@ -24,7 +24,7 @@ exports.writeData = async ({ title, source }) => {
       database_id: databaseId,
     },
     properties: {
-      [process.env.NOTION_TITLE_ID]: {
+      [process.env.NOTION_NAME_ID]: {
         title: [
           {
             type: "text",
