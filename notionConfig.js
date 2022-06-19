@@ -2,6 +2,7 @@
 require("dotenv").config();
 
 const { Client } = require("@notionhq/client");
+const { url } = require("inspector");
 const { uuid } = require("uuidv4");
 
 const notion = new Client({
@@ -17,26 +18,22 @@ exports.readData = async () => {
 };
 
 // Write data to database
-exports.writeData = async (name, source) => {
+exports.writeData = async ({ title }) => {
   const response = await notion.pages.create({
     parent: {
       database_id: databaseId,
     },
     properties: {
-      Name: {
+      title: {
         title: [
           {
+            type: "text",
             text: {
-              content: name,
+              content: title,
             },
           },
         ],
       },
-      Source: {
-        url: source,
-      },
-      Status: null,
-      Topic: null,
     },
   });
   return response;
