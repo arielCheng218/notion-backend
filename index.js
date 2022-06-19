@@ -6,9 +6,9 @@ const writeData = notionConfig.writeData;
 const port = 8000;
 const app = express();
 
-app.get("/", async (req, res) => {
-  const out = await writeData("Test", "https://www.youtube.com");
-  res.send(out);
+app.get("/", (req, res) => {
+  // const out = await writeData("Test", "https://www.youtube.com");
+  res.send("hello world");
 });
 
 module.exports = app;
