@@ -34,8 +34,10 @@ exports.writeData = async ({ title, source }) => {
           },
         ],
       },
-      "<tdn": {
-        url: source,
+      Source: {
+        "<tdn": {
+          url: source,
+        },
       },
     },
   });
