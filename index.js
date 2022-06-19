@@ -1,12 +1,14 @@
 // install express with `npm install express`
 const express = require("express");
 const notionConfig = require("./notionConfig");
+const readData = notionConfig.readData;
 const writeData = notionConfig.writeData;
 
 const app = express();
 
 app.get("/", async (req, res) => {
-  res.send("hello world!");
+  data = await readData();
+  res.send(data);
 });
 
 app.post("/add-to-nerd-time-list", async (req, res) => {

@@ -10,6 +10,12 @@ const notion = new Client({
 
 const databaseId = "632f1543a9a24c73bae4c30838c64004";
 
+// Read data from database
+exports.readData = async () => {
+  const response = await notion.databases.query({ database_id: databaseId });
+  return response;
+};
+
 // Write data to database
 exports.writeData = async (name, source) => {
   const response = await notion.pages.create({
