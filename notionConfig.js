@@ -30,7 +30,6 @@ exports.writeData = async (name, source) => {
       Status: null,
       Topic: null,
     },
-    children: null,
   });
   return response;
 };
