@@ -12,7 +12,10 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/add-to-nerd-time-list", async (req, res) => {
-  const data = await writeData({ title: "Test" });
+  const data = await writeData({
+    title: "Test",
+    source: "https://www.youtube.com",
+  });
   return res.send(data);
 });
 
