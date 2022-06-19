@@ -28,6 +28,7 @@ exports.writeData = async (name, source) => {
         url: source,
       },
     },
+    children: [],
   });
   return response;
 };
