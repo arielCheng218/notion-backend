@@ -7,6 +7,7 @@ const port = 8000;
 const app = express();
 
 app.get("/", (req, res) => {
+  console.log("get request");
   // const out = await writeData("Test", "https://www.youtube.com");
   res.send("hello world");
 });
