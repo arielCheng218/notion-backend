@@ -1,0 +1,24 @@
+{
+  "name": "notion-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielCheng218/notion-backend.git"
+  },
+  "keywords": [],
+  "author": "Ariel Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arielCheng218/notion-backend/issues"
+  },
+  "homepage": "https://github.com/arielCheng218/notion-backend#readme",
+  "dependencies": {
+    "@notionhq/client": "^1.0.4",
+    "express": "^4.18.1"
+  }
+}
