@@ -1,1 +1,0 @@
-{"id":"2fb5c1b3-77ff-4537-9b8f-10e6d9339ac6","space":25038,"runtime":"nodejs14.x","name":"notion-backend","path":"4b9vwt","project":"c09jxea1","account":"144798365827","region":"ap-southeast-1","deps":["@notionhq/client@^1.0.4","express@^4.18.1","dotenv@^16.0.1"],"envs":null,"public":true,"log_level":"debug","cron":""}

@@ -6,9 +6,12 @@ const writeData = notionConfig.writeData;
 const app = express();
 
 app.get("/", async (req, res) => {
-  const out = await writeData("Test", "https://www.youtube.com");
-  console.log(out);
-  res.send("get request");
+  res.send("hello world!");
+});
+
+app.post("/add-to-nerd-time-list", async (req, res) => {
+  const data = await writeData("Test", "https://www.youtube.com");
+  return res.send(data);
 });
 
 module.exports = app;
