@@ -2,6 +2,7 @@
 require("dotenv").config();
 
 const { Client } = require("@notionhq/client");
+const { uuid } = require("uuidv4");
 
 const notion = new Client({
   auth: "secret_ArmCMi4T3vrro89rQbRpF6S3LSer46Suocv8nV4uri6",
@@ -17,6 +18,7 @@ exports.writeData = async (name, source) => {
     },
     properties: {
       Name: {
+        id: uuid(),
         title: [
           {
             text: {
