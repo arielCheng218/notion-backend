@@ -6,13 +6,21 @@ const writeData = notionConfig.writeData;
 
 const app = express();
 
+app.use(express.static("public"));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
 app.get("/", async (req, res) => {
   data = await readData();
   res.send(data);
 });
 
 app.post("/on-submit", async (req, res) => {
-  console.log(req);
+  console.log(req.body.name);
+  console.log(req.body.source);
   const data = await writeData({
     name: req.body.name,
     source: req.source,
