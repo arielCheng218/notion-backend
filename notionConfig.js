@@ -20,7 +20,14 @@ exports.writeData = async (name, source) => {
       Name: {
         id: uuid(),
         type: "title",
-        name: name,
+        title: [
+          {
+            type: "text",
+            text: {
+              content: name,
+            },
+          },
+        ],
       },
       Source: {
         id: uuid(),
