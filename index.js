@@ -12,7 +12,7 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/on-submit", async (req, res) => {
-  console.log(req.body.name, req.body.source);
+  console.log(req.body);
   const data = await writeData({
     name: req.body.name,
     source: req.source,
