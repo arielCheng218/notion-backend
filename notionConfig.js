@@ -6,10 +6,10 @@ const { url } = require("inspector");
 const { uuid } = require("uuidv4");
 
 const notion = new Client({
-  auth: "secret_ArmCMi4T3vrro89rQbRpF6S3LSer46Suocv8nV4uri6",
+  auth: process.env.NOTION_API_KEY,
 });
 
-const databaseId = "632f1543a9a24c73bae4c30838c64004";
+const databaseId = process.env.NOTION_DATABASE_ID;
 
 // Read data from database
 exports.readData = async () => {
@@ -24,7 +24,7 @@ exports.writeData = async ({ title, source }) => {
       database_id: databaseId,
     },
     properties: {
-      title: {
+      [process.env.NOTION_TITLE_ID]: {
         title: [
           {
             type: "text",
@@ -34,10 +34,8 @@ exports.writeData = async ({ title, source }) => {
           },
         ],
       },
-      Source: {
-        "<tdn": {
-          url: source,
-        },
+      [process.env.NOTION_SOURCE_ID]: {
+        url: source,
       },
     },
   });
